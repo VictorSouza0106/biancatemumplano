@@ -20,15 +20,17 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/scss"]
+            },
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/scss/global.scss"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -49,10 +51,17 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "scripts": true,
+                "styles": { "minify": true, "inlineCritical": true }
+              }
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": { "minify": true, "inlineCritical": true }
+              },
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -63,7 +72,8 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "biancatemumplano:build:production"
+              "buildTarget": "biancatemumplano:build:production",
+              "optmimization": true
             },
             "development": {
               "buildTarget": "biancatemumplano:build:development"
@@ -79,18 +89,23 @@
           "options": {
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/scss"]
+            },
             "assets": [
+              "src/assests",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/scss/global.scss"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "74b242b4-5947-4579-be0c-0e82cbeb5576"
   }
 }

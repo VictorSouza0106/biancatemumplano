@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles: make `app-root` occupy the full viewport height.
+	 Also use a CSS variable `--vh` set by a small client-side script to
+	 work around mobile browser 100vh issues (address bar hiding).
+*/
+
+:root {
+	--vh: 1vh;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+/* Make the root app element use the viewport height via the --vh variable.
+	 This avoids mobile 100vh bugs while preserving desktop behavior. */
+app-root {
+	height: calc(var(--vh, 1vh) * 100);
+	min-height: 100vh;
+	display: block;
+}
+
+/* Optional: ensure direct children can grow to fill root. */
+app-root > * {
+	min-height: 100%;
+}

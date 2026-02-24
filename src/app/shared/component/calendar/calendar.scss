@@ -1,0 +1,12 @@
+@use '@styles/variables.scss' as *;
+
+.text-day {
+  font-family: 'Manbow', sans-serif;
+  font-size: 3.5em;
+}
+
+.text-month {
+  font-family: 'Migra', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: -8px;
+}
