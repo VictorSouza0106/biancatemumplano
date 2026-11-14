@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "id": "wedding",
+      "label": "Wedding",
+      "visible": true,
+      "order": 1,
+      "photos": []
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait",
+      "visible": true,
+      "order": 2,
+      "photos": []
+    },
+    {
+      "id": "landscape",
+      "label": "Landscape",
+      "visible": true,
+      "order": 3,
+      "photos": []
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "visible": false,
+      "order": 4,
+      "photos": []
+    }
+  ]
+}
