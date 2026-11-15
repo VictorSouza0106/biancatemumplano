@@ -54,7 +54,7 @@ export const photography = {
   "links": [
     {
       "title": "Meu portfólio em Cinema",
-      "url": "https://biancatemumplano.com.br/",
+      "url": "https://biancatemumplano.myportfolio.com/",
       "emoji": "🎥"
     },
     {
