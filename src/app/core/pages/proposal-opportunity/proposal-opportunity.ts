@@ -1,11 +1,12 @@
 import { afterNextRender, Component, DestroyRef, ElementRef, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArrowIcon } from '../../../shared/components/arrow-icon/arrow-icon';
 import { PlanCard, ProposalPlan } from '../../../shared/components/plan-card/plan-card';
 import { SectionMeta } from '../../../shared/components/section-meta/section-meta';
 
 @Component({
   selector: 'app-proposal-opportunity',
-  imports: [PlanCard, SectionMeta],
+  imports: [ArrowIcon, PlanCard, SectionMeta],
   templateUrl: './proposal-opportunity.html',
   styleUrl: './proposal-opportunity.scss',
 })
@@ -64,7 +65,7 @@ export class ProposalOpportunity {
   private readonly destroyRef = inject(DestroyRef);
 
   constructor() {
-    this.title.setTitle('Sua experiência | Bianca Santos Fotografia');
+    this.title.setTitle('Sua experiência | BTP Fotografia');
     this.meta.updateTag({
       name: 'description',
       content: 'Proposta de fotografia para Opportunity, por Bianca Santos Fotografia.',
