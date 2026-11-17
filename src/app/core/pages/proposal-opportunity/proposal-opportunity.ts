@@ -1,12 +1,13 @@
 import { afterNextRender, Component, DestroyRef, ElementRef, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 import { ArrowIcon } from '../../../shared/components/arrow-icon/arrow-icon';
 import { PlanCard, ProposalPlan } from '../../../shared/components/plan-card/plan-card';
 import { SectionMeta } from '../../../shared/components/section-meta/section-meta';
 
 @Component({
   selector: 'app-proposal-opportunity',
-  imports: [ArrowIcon, PlanCard, SectionMeta],
+  imports: [ArrowIcon, PlanCard, RouterLink, SectionMeta],
   templateUrl: './proposal-opportunity.html',
   styleUrl: './proposal-opportunity.scss',
 })
