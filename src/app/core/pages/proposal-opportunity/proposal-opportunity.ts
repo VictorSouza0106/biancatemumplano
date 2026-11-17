@@ -68,7 +68,7 @@ export class ProposalOpportunity {
     this.title.setTitle('Sua experiência | BTP Fotografia');
     this.meta.updateTag({
       name: 'description',
-      content: 'Proposta de fotografia para Opportunity, por Bianca Santos Fotografia.',
+      content: 'Proposta de fotografia para Opportunity, por BTP Fotografia.',
     });
 
     afterNextRender(() => this.initTimeline());
