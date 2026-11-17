@@ -1,0 +1,27 @@
+<article class="plan-card" [class.plan-card--featured]="plan().featured" [attr.aria-labelledby]="plan().id">
+  <span class="plan-stars" [attr.aria-label]="plan().stars + (plan().stars === 1 ? ' estrela' : ' estrelas')">
+    {{ '★'.repeat(plan().stars) }}
+  </span>
+  @if (plan().featured) {
+    <span class="plan-badge">Mais escolhido</span>
+  }
+
+  <h3 [id]="plan().id">Plano {{ plan().name }}</h3>
+  <p class="plan-price">{{ plan().price }}</p>
+  <p class="plan-includes">O que inclui</p>
+  <ul class="plan-features">
+    @for (feature of plan().features; track feature) {
+      <li>{{ feature }}</li>
+    }
+  </ul>
+  <p class="plan-count">Até <strong>{{ plan().photoCount }} fotos</strong><br />entregues!</p>
+  <a
+    class="plan-button"
+    [href]="whatsappUrl()"
+    target="_blank"
+    rel="noopener noreferrer"
+    [attr.aria-label]="'Contratar plano ' + plan().name + ' pelo WhatsApp'"
+  >
+    Contratar
+  </a>
+</article>

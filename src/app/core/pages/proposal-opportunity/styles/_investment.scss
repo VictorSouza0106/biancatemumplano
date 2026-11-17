@@ -1,0 +1,42 @@
+.payment-heading {
+  padding: 16px 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+.payment-row {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.payment-row:last-child {
+  border: 0;
+}
+.payment-percent {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 27px;
+  min-width: 59px;
+  line-height: 1;
+}
+.payment-row p {
+  font-size: 13px;
+  margin: 0;
+}
+.investment h2 {
+  margin-bottom: 34px;
+}
+.plans {
+  display: grid;
+  gap: 26px;
+}
+.payment-plan {
+  margin-top: 39px;
+  padding: 6px 23px 9px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 32px;
+}

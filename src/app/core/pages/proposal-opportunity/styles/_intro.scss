@@ -1,0 +1,25 @@
+.intro > p {
+  max-width: 450px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #394a46;
+}
+.intro > p strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+.intro-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 19px;
+  border-top: 1px solid var(--line);
+  margin-top: 42px;
+  padding-top: 22px;
+}
+.intro-highlight p {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 23px;
+  line-height: 1.16;
+  margin: 0;
+  max-width: 320px;
+}

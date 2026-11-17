@@ -36,9 +36,26 @@ router-outlet {
   height: 100%;
 }
 
-* {
+app-photography,
+app-photography * {
   font-family: 'Migra', sans-serif;
   color: var(--white-color);
+}
+
+body:has(app-proposal-opportunity) {
+  background-color: #eee9e1;
+  scroll-behavior: smooth;
+}
+
+html:has(app-proposal-opportunity) {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(app-proposal-opportunity),
+  html:has(app-proposal-opportunity) {
+    scroll-behavior: auto;
+  }
 }
 
 .title {

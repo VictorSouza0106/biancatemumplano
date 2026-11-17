@@ -1,0 +1,46 @@
+.next {
+  padding-bottom: 132px;
+}
+.next > p {
+  font-size: 17px;
+  max-width: 380px;
+}
+.next-list {
+  padding: 13px 0 0;
+  margin: 24px 0 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.next-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.next-list li span {
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 700;
+  padding-top: 4px;
+}
+.next-list li p {
+  margin: 0;
+  font-size: 14px;
+}
+.back-top {
+  display: inline-flex;
+  gap: 32px;
+  align-items: center;
+  margin-top: 37px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+.back-top span {
+  font-size: 18px;
+}

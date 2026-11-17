@@ -1,0 +1,40 @@
+.statement {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 70px 28px 72px;
+  position: relative;
+  overflow: hidden;
+}
+.statement:after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  right: -170px;
+  bottom: -110px;
+}
+.statement-mark {
+  font-family: Georgia, serif;
+  font-size: 88px;
+  line-height: 0.7;
+  color: #b68a70;
+}
+.statement blockquote {
+  font-size: clamp(38px, 11vw, 55px);
+  margin: 22px 0 37px;
+  max-width: 540px;
+}
+.statement blockquote em {
+  color: #d6ad91;
+}
+.statement-signature {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  font-weight: 700;
+  color: #d1c9be;
+}
+
+.statement figure { margin: 0; }
