@@ -2,8 +2,8 @@ import { Injectable, inject } from '@angular/core';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 
 const SITE_URL = 'https://www.biancatemumplano.com.br';
-const SHARE_IMAGE_URL = `${SITE_URL}/photography/bianca-compartilhamento-1200x430.jpg`;
-const SHARE_IMAGE_ALT = 'Bianca sorrindo e segurando uma câmera fotográfica';
+const SHARE_IMAGE_URL = `${SITE_URL}/photography/bianca-compartilhamento-closeup-1200x430.jpg`;
+const SHARE_IMAGE_ALT = 'Retrato aproximado de Bianca sorrindo';
 
 @Injectable({ providedIn: 'root' })
 export class PageMetaService {
