@@ -1,5 +1,6 @@
 import { Component, effect, input, inject } from "@angular/core";
-import { Title, Meta } from "@angular/platform-browser";
+import { Router } from '@angular/router';
+import { PageMetaService } from '../../../../shared/services/page-meta.service';
 import { ApproachComponent } from "../../components/approach/approach.component";
 import { CareComponent } from "../../components/care/care.component";
 import { FooterComponent } from "../../components/footer/footer.component";
@@ -34,16 +35,17 @@ export class EventTemplateComponent {
   // Inputs & Outputs
   readonly contentData = input.required<IProposal>();
 
-  private readonly title = inject(Title);
-  private readonly meta = inject(Meta);
+  private readonly pageMeta = inject(PageMetaService);
+  private readonly router = inject(Router);
 
   constructor() {
-    this.title.setTitle('Sua experiência | BTP Fotografia');
     effect(() => {
-      this.meta.updateTag({
-        name: 'description',
-        content: `Proposta de fotografia para ${this.contentData().name}, por BTP Fotografia.`,
-      });
+      const name = this.contentData().name;
+      this.pageMeta.update(
+        `Proposta para ${name} | BTP Fotografia`,
+        `Proposta de fotografia para ${name}, por BTP Fotografia.`,
+        this.router.url,
+      );
     });
   }
 }

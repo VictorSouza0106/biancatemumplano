@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PageMetaService } from '../../../shared/services/page-meta.service';
 import { photography } from './photography.data';
 
 @Component({
@@ -8,6 +9,14 @@ import { photography } from './photography.data';
 })
 export class PhotographyComponent {
   readonly content = photography;
+
+  constructor() {
+    inject(PageMetaService).update(
+      'BTP | Bianca Tem Um Plano',
+      'Bianca tem um plano - Fotografia de Casamento, Ensaios e Eventos Sociais.',
+      '/',
+    );
+  }
 
   scrollCatalog(catalog: HTMLElement, direction: number): void {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
