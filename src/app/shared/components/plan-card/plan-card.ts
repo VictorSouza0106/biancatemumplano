@@ -1,15 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-
-export interface ProposalPlan {
-  id: string;
-  name: string;
-  price: string;
-  delivery: string;
-  photoCount: number;
-  stars: number;
-  features: readonly string[];
-  featured?: boolean;
-}
+import { IProposalPlan } from 'src/app/modules/proposals/interfaces/proposal.interfaces';
 
 @Component({
   selector: 'app-plan-card',
@@ -17,7 +7,7 @@ export interface ProposalPlan {
   styleUrl: './plan-card.scss',
 })
 export class PlanCard {
-  readonly plan = input.required<ProposalPlan>();
+  readonly plan = input.required<IProposalPlan>();
 
   readonly whatsappUrl = computed(() => {
     const plan = this.plan();

@@ -1,0 +1,18 @@
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <img
+    class="hero-image"
+    src="/photography/bianca-retrato.webp"
+    alt="Bianca sorrindo e segurando uma câmera fotográfica"
+    fetchpriority="high"
+  />
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">BTP Fotografia</p>
+    <h1 id="hero-title">Vamos falar sobre a sua <em>experiência,</em> {{ proposalName() }}.</h1>
+    <p class="hero-lead">Você vive o momento. Eu capturo a magia.</p>
+    <a class="hero-link" [routerLink]="['/proposta', proposalName().toLowerCase()]" fragment="experiencia">
+      Descubra a proposta <app-arrow-icon direction="down-right" aria-hidden="true" />
+    </a>
+  </div>
+  <span class="hero-index" aria-hidden="true">01 / 05</span>
+</section>

@@ -1,0 +1,14 @@
+<app-header [proposalName]="contentData().name" />
+
+<main id="conteudo">
+  <app-hero [proposalName]="contentData().name" />
+  <app-intro />
+  <app-approach />
+  <app-statement />
+  <app-investment [plans]="contentData().plans" />
+  <app-care />
+  <app-next-steps [proposalName]="contentData().name" />
+</main>
+
+<app-footer />
+<app-navigation [proposalName]="contentData().name" />

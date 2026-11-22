@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.site-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #d8d7cc;
+  border-top: 1px solid var(--line);
+  padding: 25px 26px 112px;
+}
+.site-footer > span:last-child {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-align: right;
+}

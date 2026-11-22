@@ -1,0 +1,22 @@
+<section class="investment section-pad" id="investimento" aria-labelledby="investment-title">
+  <app-section-meta number="03" label="Sua proposta" />
+  <h2 id="investment-title">Um investimento nas memórias que <em>ficam.</em></h2>
+
+  <div class="plans">
+    @for (plan of plans(); track plan.id) {
+      <app-plan-card [plan]="plan" />
+    }
+  </div>
+
+  <div class="payment-plan" aria-labelledby="payment-title">
+    <h3 class="payment-heading" id="payment-title">Plano de pagamento</h3>
+    <div class="payment-row">
+      <span class="payment-percent">50%</span>
+      <p>Para reservar a sua data.</p>
+    </div>
+    <div class="payment-row">
+      <span class="payment-percent">50%</span>
+      <p>No dia do evento.</p>
+    </div>
+  </div>
+</section>
