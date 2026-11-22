@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 
-const SITE_URL = 'https://biancatemumplano.com.br';
-const SHARE_IMAGE_URL = `${SITE_URL}/photography/bianca-retrato.webp`;
+const SITE_URL = 'https://www.biancatemumplano.com.br';
+const SHARE_IMAGE_URL = `${SITE_URL}/photography/bianca-compartilhamento-1200x630.jpg`;
 const SHARE_IMAGE_ALT = 'Bianca sorrindo e segurando uma câmera fotográfica';
 
 @Injectable({ providedIn: 'root' })
@@ -24,9 +24,10 @@ export class PageMetaService {
       { property: 'og:description', content: description },
       { property: 'og:url', content: url },
       { property: 'og:image', content: SHARE_IMAGE_URL },
-      { property: 'og:image:type', content: 'image/webp' },
-      { property: 'og:image:width', content: '1000' },
-      { property: 'og:image:height', content: '1500' },
+      { property: 'og:image:secure_url', content: SHARE_IMAGE_URL },
+      { property: 'og:image:type', content: 'image/jpeg' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
       { property: 'og:image:alt', content: SHARE_IMAGE_ALT },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
