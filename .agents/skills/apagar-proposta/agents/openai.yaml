@@ -1,0 +1,3 @@
+interface:
+  display_name: "Apagar proposta"
+  short_description: "Lista e exclui propostas com confirmação, commit e push"
