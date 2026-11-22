@@ -8,7 +8,10 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => import('./core/pages/photography/photography').then(m => m.Photography)
+        loadComponent: () =>
+            import('./modules/home/photography/photography.component').then(
+                m => m.PhotographyComponent
+            )
     },
     {
         path: '**',

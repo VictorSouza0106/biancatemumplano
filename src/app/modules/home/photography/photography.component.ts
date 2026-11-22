@@ -3,10 +3,10 @@ import { photography } from './photography.data';
 
 @Component({
   selector: 'app-photography',
-  templateUrl: './photography.html',
-  styleUrl: './photography.scss',
+  templateUrl: './photography.component.html',
+  styleUrl: './photography.component.scss',
 })
-export class Photography {
+export class PhotographyComponent {
   readonly content = photography;
 
   scrollCatalog(catalog: HTMLElement, direction: number): void {
