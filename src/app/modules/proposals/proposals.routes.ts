@@ -14,5 +14,12 @@ export const routes: Routes = [
             import('./proposals/jucimara/jucimara.component').then(
                 m => m.JucimaraComponent
             )
+    },
+    {
+        path: 'queren-larissa',
+        loadComponent: () =>
+            import('./proposals/queren-larissa/queren-larissa.component').then(
+                m => m.QuerenLarissaComponent
+            )
     }
 ];
